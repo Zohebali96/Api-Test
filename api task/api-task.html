@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Status Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="https://www.google.co.uk" target="_blank">Google</a>
+        <a href="https://store.steampowered.com/" target="_blank">Steam</a>
+        <a href="https://www.balticapprenticeships.com/" target="_blank">Baltic Apperenticeships</a>
+    </div>
+
+    <div class="task-container">
+        <div class="taskid-container">
+            <h1>Task Status Form</h1>
+            <form id="taskForm">
+                <label for="productStatusId">Product Status ID:</label>
+                <input type="text" id="productStatusId" name="productStatusId">
+                <button type="button" onclick="handleRequest()">Submit</button>
+                <p id="errorMessage" class="error"></p>
+            </form>
+        </div>
+    </div>
+    <form id="fileUploadForm">
+        <input type="text" id="taskId" placeholder="Task ID" required />
+        <input type="file" id="fileInput" required />
+        <button type="button" onclick="uploadFile()">Upload File</button>
+        <div id="uploadMessage"></div>
+    </form>
+
+    <div class="bottom-right">
+        <img src="images\rock-4352352.jpg" alt="Placeholder Image">
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Confimation</h2>
+            <pre id="resultContent"></pre>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
